@@ -1,4 +1,4 @@
-package org.uv.Practica09;
+package org.uv.practica9;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
