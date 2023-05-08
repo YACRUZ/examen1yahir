@@ -30,7 +30,11 @@ public class Empleado {
     
     @Column(name = "direccion")
     private String direccion;
-
+    
+    public Empleado(){
+        
+    }
+    
     public Empleado(DTOEmpleado emp) {
         this.id = emp.getId();
         this.nombre = emp.getNombre();
