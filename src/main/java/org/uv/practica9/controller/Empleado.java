@@ -10,58 +10,63 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 /**
  *
  * @author yacruz
  */
-@Entity
-@Table(name = "empleado")
+@Entity(name ="empleado")
 public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id")
-    private long clave;
-
+    @Column(name="id")
+    private long id;
+    
     @Column(name = "nombre")
-    String nombre;
-
-    @Column(name = "direccion")
-    String direccion;
-
+    private String nombre;
+    
     @Column(name = "telefono")
-    String telefono;
+    private String telefono;
+    
+    @Column(name = "direccion")
+    private String direccion;
 
+    public Empleado(DTOEmpleado emp) {
+        this.id = emp.getId();
+        this.nombre = emp.getNombre();
+        this.telefono = emp.getTelefono();
+        this.direccion = emp.getDireccion();
+    }
+ 
     public long getId() {
-        return clave;
+        return id;
     }
 
-    public void setId(int clave) {
-        this.clave = clave;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getTelefono() {
         return telefono;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getDireccion() {
+        return direccion;
     }
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
     }
 }

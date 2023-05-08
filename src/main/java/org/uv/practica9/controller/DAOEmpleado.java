@@ -3,12 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package org.uv.practica9.controller;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
  * @author yacruz
  */
-public interface RepositoryEmpleado extends CrudRepository<Empleado, Long>  {
+public interface DAOEmpleado extends JpaRepository<Empleado, Long>  {
     
 }
