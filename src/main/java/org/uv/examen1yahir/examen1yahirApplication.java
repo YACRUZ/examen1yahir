@@ -1,13 +1,13 @@
-package org.uv.practica9;
+package org.uv.examen1yahir;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Practica09Application {
+public class examen1yahirApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Practica09Application.class, args);
+		SpringApplication.run(examen1yahirApplication.class, args);
 	}
         //Comentario
 
